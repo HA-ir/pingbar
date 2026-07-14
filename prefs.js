@@ -3,7 +3,7 @@ import Gtk from 'gi://Gtk';
 import Gio from 'gi://Gio';
 import { ExtensionPreferences, gettext as _ } from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
-export default class SpeedNetPreferences extends ExtensionPreferences {
+export default class PingBarPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
         const settings = this.getSettings();
 

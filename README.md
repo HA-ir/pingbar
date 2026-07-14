@@ -2,8 +2,6 @@
 
 A GNOME Shell extension that monitors ping, jitter, and packet loss for your chosen hosts right in the top bar.
 
-![Screenshot](/screenshot.png)
-
 ## Features
 
 - **RTT, jitter, packet loss** — real-time metrics in the top bar
@@ -21,7 +19,7 @@ A GNOME Shell extension that monitors ping, jitter, and packet loss for your cho
 ## Install
 
 ```bash
-git clone https://github.com/iamhossein/pingbar.git
+git clone https://github.com/HA-ir/pingbar.git
 cd pingbar
 ./install.sh
 ```

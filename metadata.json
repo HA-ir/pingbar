@@ -3,6 +3,6 @@
   "name": "PingBar",
   "description": "Ping and latency monitor in the GNOME top bar",
   "shell-version": ["45", "46", "47"],
-  "url": "https://github.com/iamhossein/pingbar",
+  "url": "https://github.com/HA-ir/pingbar",
   "settings-schema": "org.gnome.shell.extensions.pingbar"
 }

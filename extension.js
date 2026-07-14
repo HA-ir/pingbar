@@ -55,16 +55,16 @@ class PingBarIndicator extends PanelMenu.Button {
         this._lastNotifyTime = 0;
 
         // Top bar: box layout with individual metric labels
-        this._box = new St.BoxLayout({ style_class: 'speed-net-box' });
+        this._box = new St.BoxLayout({ style_class: 'pingbar-box' });
         this.add_child(this._box);
 
         this._speedLabel = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'speed-label' });
-        this._speedSep = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'speed-net-sep' });
-        this._rttLabel = new St.Label({ text: '...', y_align: Clutter.ActorAlign.CENTER, style_class: 'speed-net-label' });
-        this._rttSep = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'speed-net-sep' });
-        this._jitterLabel = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'speed-net-label' });
-        this._jitterSep = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'speed-net-sep' });
-        this._lossLabel = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'speed-net-label' });
+        this._speedSep = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'pingbar-sep' });
+        this._rttLabel = new St.Label({ text: '...', y_align: Clutter.ActorAlign.CENTER, style_class: 'pingbar-label' });
+        this._rttSep = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'pingbar-sep' });
+        this._jitterLabel = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'pingbar-label' });
+        this._jitterSep = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'pingbar-sep' });
+        this._lossLabel = new St.Label({ text: '', y_align: Clutter.ActorAlign.CENTER, style_class: 'pingbar-label' });
 
         this._box.add_child(this._speedLabel);
         this._box.add_child(this._speedSep);
@@ -110,7 +110,7 @@ class PingBarIndicator extends PanelMenu.Button {
             const headerItem = new PopupMenu.PopupMenuItem('', { reactive: false });
             const headerLabel = new St.Label({
                 text: `── ${host} ──`,
-                style_class: 'speed-net-host-header',
+                style_class: 'pingbar-host-header',
             });
             headerItem.add_child(headerLabel);
             this.menu.addMenuItem(headerItem);
@@ -128,7 +128,7 @@ class PingBarIndicator extends PanelMenu.Button {
                 const item = new PopupMenu.PopupMenuItem('', { reactive: false });
                 const label = new St.Label({
                     text: `${m.icon}  ${m.label}: ...`,
-                    style_class: 'speed-net-menu-item',
+                    style_class: 'pingbar-menu-item',
                 });
                 item.add_child(label);
                 this.menu.addMenuItem(item);
@@ -160,7 +160,7 @@ class PingBarIndicator extends PanelMenu.Button {
         const area = new St.DrawingArea({
             width: SPARKLINE_WIDTH,
             height: SPARKLINE_HEIGHT,
-            style_class: 'speed-net-sparkline',
+            style_class: 'pingbar-sparkline',
         });
 
         area.connect('repaint', () => {
