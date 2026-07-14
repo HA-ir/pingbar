@@ -1,0 +1,48 @@
+.speed-net-box {
+  spacing: 0;
+}
+
+.speed-net-label {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 2px;
+}
+
+.speed-net-sep {
+  font-size: 12px;
+  padding: 0 2px;
+  color: #888;
+}
+
+/* RTT colors */
+.rtt-good { color: #4CAF50; }
+.rtt-warn { color: #FFC107; }
+.rtt-bad  { color: #F44336; }
+
+/* Jitter colors */
+.jitter-good { color: #4CAF50; }
+.jitter-warn { color: #FFC107; }
+.jitter-bad  { color: #F44336; }
+
+/* Packet Loss colors */
+.loss-good { color: #4CAF50; }
+.loss-warn { color: #FFC107; }
+.loss-bad  { color: #F44336; }
+
+/* Speed (no color, just regular) */
+.speed-label { color: #aaa; }
+
+.speed-net-menu-item {
+  padding: 4px 8px;
+}
+
+.speed-net-host-header {
+  font-size: 10px;
+  font-weight: 700;
+  color: #aaa;
+  padding: 6px 8px 2px 8px;
+}
+
+.speed-net-sparkline {
+  padding: 4px 8px;
+}

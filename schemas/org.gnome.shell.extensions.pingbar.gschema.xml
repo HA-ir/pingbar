@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.pingbar"
+          path="/org/gnome/shell/extensions/pingbar/">
+
+    <key name="target-host" type="s">
+      <default>'1.1.1.1,8.8.8.8'</default>
+      <summary>Target Hosts</summary>
+      <description>Comma-separated list of domain names or IP addresses to measure</description>
+    </key>
+
+    <key name="update-interval" type="i">
+      <default>10</default>
+      <summary>Update Interval (seconds)</summary>
+      <description>How often to update metrics, in seconds</description>
+    </key>
+
+    <key name="show-rtt" type="b">
+      <default>true</default>
+      <summary>Show RTT</summary>
+      <description>Display round-trip time in the top bar</description>
+    </key>
+
+    <key name="show-jitter" type="b">
+      <default>true</default>
+      <summary>Show Jitter</summary>
+      <description>Display jitter in the top bar</description>
+    </key>
+
+    <key name="show-packet-loss" type="b">
+      <default>true</default>
+      <summary>Show Packet Loss</summary>
+      <description>Display packet loss percentage in the top bar</description>
+    </key>
+
+    <key name="show-download-speed" type="b">
+      <default>false</default>
+      <summary>Show Download Speed</summary>
+      <description>Display download speed in the top bar (requires a working speed test URL)</description>
+    </key>
+
+    <key name="show-sparkline" type="b">
+      <default>true</default>
+      <summary>Show Sparkline</summary>
+      <description>Display mini history graph in the dropdown menu</description>
+    </key>
+
+    <key name="enable-color-coding" type="b">
+      <default>true</default>
+      <summary>Enable Color Coding</summary>
+      <description>Color each metric independently based on its value</description>
+    </key>
+
+    <key name="ping-count" type="i">
+      <default>5</default>
+      <summary>Ping Count</summary>
+      <description>Number of ping packets to send per measurement per host</description>
+    </key>
+
+    <key name="speed-test-url" type="s">
+      <default>''</default>
+      <summary>Speed Test URL</summary>
+      <description>Custom URL for throughput measurement. Leave empty to measure speed to the target host.</description>
+    </key>
+
+    <key name="speed-test-interval" type="i">
+      <default>6</default>
+      <summary>Speed Test Interval (cycles)</summary>
+      <description>Run speed test every N update cycles. With default 10s update interval, 6 = every 60s.</description>
+    </key>
+
+    <key name="rtt-threshold-good" type="i">
+      <default>20</default>
+      <summary>RTT Good Threshold (ms)</summary>
+      <description>RTT below this value is shown as green</description>
+    </key>
+
+    <key name="rtt-threshold-warn" type="i">
+      <default>100</default>
+      <summary>RTT Warn Threshold (ms)</summary>
+      <description>RTT below this value is shown as yellow, above as red</description>
+    </key>
+
+    <key name="jitter-threshold-good" type="i">
+      <default>5</default>
+      <summary>Jitter Good Threshold (ms)</summary>
+      <description>Jitter below this value is shown as green</description>
+    </key>
+
+    <key name="jitter-threshold-warn" type="i">
+      <default>20</default>
+      <summary>Jitter Warn Threshold (ms)</summary>
+      <description>Jitter below this value is shown as yellow, above as red</description>
+    </key>
+
+    <key name="loss-threshold-good" type="i">
+      <default>1</default>
+      <summary>Packet Loss Good Threshold (%)</summary>
+      <description>Loss below this percentage is shown as green</description>
+    </key>
+
+    <key name="loss-threshold-warn" type="i">
+      <default>5</default>
+      <summary>Packet Loss Warn Threshold (%)</summary>
+      <description>Loss below this percentage is shown as yellow, above as red</description>
+    </key>
+
+    <key name="notify-on-spike" type="b">
+      <default>false</default>
+      <summary>Notify on Latency Spikes</summary>
+      <description>Show desktop notification when latency or packet loss exceeds thresholds</description>
+    </key>
+
+    <key name="rtt-spike-threshold" type="i">
+      <default>200</default>
+      <summary>RTT Spike Threshold (ms)</summary>
+      <description>Notify when RTT exceeds this value</description>
+    </key>
+
+    <key name="loss-threshold" type="i">
+      <default>10</default>
+      <summary>Packet Loss Threshold (%)</summary>
+      <description>Notify when packet loss exceeds this percentage</description>
+    </key>
+
+  </schema>
+</schemalist>
